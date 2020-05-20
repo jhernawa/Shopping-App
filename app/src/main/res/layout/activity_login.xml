@@ -1,0 +1,107 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="40dp"
+    android:padding="16dp">
+
+
+
+    <ImageView
+        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/blue_mart_logo">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_email_black_24dp">
+
+
+        </ImageView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+
+                android:id="@+id/edit_text_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:hint="yourname@example.com" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_lock_black_24dp">
+
+        </ImageView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:text="Forgot Password"
+        android:textColor="@color/colorText"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:background="@drawable/border_button"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/text_view_new_user"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="New User? Click Here">
+
+    </TextView>
+
+</LinearLayout>

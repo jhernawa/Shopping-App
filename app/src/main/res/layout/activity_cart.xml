@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <ScrollView
+        android:layout_below="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_product_order_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:background="#E7E7E7"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:padding="10dp"
+                android:id="@+id/layout_order_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_order_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Amount"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/text_view_order_amount_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/text_view_order_amount"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="$465"/>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/text_view_order_amount"
+                    android:id="@+id/text_view_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/text_view_total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/text_view_total"
+                    android:layout_below="@+id/text_view_order_amount_value"
+                    android:textSize="15sp"
+                    android:text="$20"/>
+
+                <TextView
+                    android:layout_below="@+id/text_view_total"
+                    android:id="@+id/text_view_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discount"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/text_view_discount_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/text_view_discount"
+                    android:layout_below="@+id/text_view_total_amount"
+                    android:textSize="15sp"
+                    android:text="$20"/>
+
+
+                <TextView
+                    android:layout_below="@+id/text_view_discount"
+                    android:id="@+id/text_view_delivery_charges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Charges"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/text_view_address"
+                    android:layout_below="@+id/text_view_discount_amount">
+
+                    <RadioButton
+                        android:id="@+id/radio_button_2_hour_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 hour delivery: $5">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio_button_standard_shipping"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Standard shipping (3-5 days): $3">
+
+                    </RadioButton>
+
+                </RadioGroup>
+
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/radio_group"
+                    android:id="@+id/button_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Proceed Checkout"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:background="@drawable/add_to_cart_border"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/text_view_empty_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Empty Cart"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:visibility="gone">
+
+
+    </TextView>
+
+
+
+</RelativeLayout>
